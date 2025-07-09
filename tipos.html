@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tipos de Inteligencia Artificial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-azul-oscuro text-white font-sans">
+
+  <header class="bg-azul-medio shadow-lg sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold text-amarillo">IA Web</h1>
+
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" 
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <ul id="nav-menu" class="hidden md:flex space-x-6 text-white font-medium">
+      <li><a href="index.html" class="hover:text-amarillo-claro">Inicio</a></li>
+      <li><a href="historia.html" class="hover:text-amarillo-claro">Historia</a></li>
+      <li><a href="tipos.html" class="hover:text-amarillo-claro">Tipos</a></li>
+      <li><a href="aplicaciones.html" class="hover:text-amarillo-claro">Aplicaciones</a></li>
+      <li><a href="etica.html" class="hover:text-amarillo-claro">Ética</a></li>
+      <li><a href="futuro.html" class="hover:text-amarillo-claro">Futuro</a></li>
+    </ul>
+  </nav>
+
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+    <ul class="flex flex-col space-y-2 text-white font-medium">
+      <li><a href="index.html" class="hover:text-amarillo-claro">Inicio</a></li>
+      <li><a href="historia.html" class="hover:text-amarillo-claro">Historia</a></li>
+      <li><a href="tipos.html" class="hover:text-amarillo-claro">Tipos</a></li>
+      <li><a href="aplicaciones.html" class="hover:text-amarillo-claro">Aplicaciones</a></li>
+      <li><a href="etica.html" class="hover:text-amarillo-claro">Ética</a></li>
+      <li><a href="futuro.html" class="hover:text-amarillo-claro">Futuro</a></li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+  <section class="text-center py-12 px-4 animate-fadeInUp">
+    <h2 class="text-4xl font-bold text-amarillo mb-4">Tipos de Inteligencia Artificial</h2>
+    <p class="text-lg max-w-3xl mx-auto">
+      La Inteligencia Artificial se puede clasificar según su capacidad de aprendizaje, su nivel de conciencia o su propósito.
+      Aquí exploramos los tipos más comunes de IA que se han desarrollado hasta la actualidad.
+    </p>
+  </section>
+
+  <main class="py-8 px-4 max-w-6xl mx-auto grid md:grid-cols-2 gap-8 animate-fadeInUp">
+
+    <div class="bg-white text-black p-4 rounded-xl shadow-md transform transition duration-300 hover:scale-105">
+      <img src="img/ia_reactiva.jpg" alt="IA Reactiva" class="w-full h-40 object-cover rounded-md mb-4" />
+      <h3 class="text-xl font-bold mb-2">IA Reactiva</h3>
+      <p>
+        Este tipo de IA no tiene memoria ni capacidad para aprender de experiencias pasadas. 
+        Responde a estímulos actuales según reglas predefinidas. 
+        Es común en motores de ajedrez como Deep Blue, que analizan movimientos sin recordar jugadas anteriores.
+      </p>
+    </div>
+
+    <div class="bg-white text-black p-4 rounded-xl shadow-md transform transition duration-300 hover:scale-105">
+      <img src="img/ia_memoria_limitada.jpg" alt="IA con memoria limitada" class="w-full h-40 object-cover rounded-md mb-4" />
+      <h3 class="text-xl font-bold mb-2">IA con Memoria Limitada</h3>
+      <p>
+        Puede aprender de datos recientes y tomar decisiones con base en esa información. 
+        Se usa en vehículos autónomos que observan señales, peatones o velocidad para tomar decisiones en tiempo real.
+      </p>
+    </div>
+
+    <div class="bg-white text-black p-4 rounded-xl shadow-md transform transition duration-300 hover:scale-105">
+      <img src="img/ia_teoria_mente.jpg" alt="Teoría de la mente" class="w-full h-40 object-cover rounded-md mb-4" />
+      <h3 class="text-xl font-bold mb-2">IA con Teoría de la Mente</h3>
+      <p>
+        Aún en etapa de investigación, busca que las máquinas comprendan emociones, intenciones y pensamientos humanos. 
+        Sería clave para una interacción social avanzada entre humanos y sistemas de IA.
+      </p>
+    </div>
+
+    <div class="bg-white text-black p-4 rounded-xl shadow-md transform transition duration-300 hover:scale-105">
+      <img src="img/ia_autoconsciente.jpg" alt="IA autoconsciente" class="w-full h-40 object-cover rounded-md mb-4" />
+      <h3 class="text-xl font-bold mb-2">IA Autoconsciente</h3>
+      <p>
+        Es un concepto futurista donde la IA tendría conciencia de sí misma. 
+        Sería capaz de tener pensamientos propios, emociones e incluso autopercepción, lo que plantea dilemas éticos profundos.
+      </p>
+    </div>
+
+    <div class="bg-white text-black p-4 rounded-xl shadow-md transform transition duration-300 hover:scale-105">
+      <img src="img/ia_estrecha.jpg" alt="IA estrecha" class="w-full h-40 object-cover rounded-md mb-4" />
+      <h3 class="text-xl font-bold mb-2">IA Estrecha (Débil)</h3>
+      <p>
+        Diseñada para realizar tareas específicas como reconocimiento facial, traducción de idiomas o asistencia por voz. 
+        Es la más común hoy en día y está presente en aplicaciones como Siri, Alexa y Google Assistant.
+      </p>
+    </div>
+
+    <div class="bg-white text-black p-4 rounded-xl shadow-md transform transition duration-300 hover:scale-105">
+      <img src="img/ia_general.jpg" alt="IA general" class="w-full h-40 object-cover rounded-md mb-4" />
+      <h3 class="text-xl font-bold mb-2">IA General (AGI)</h3>
+      <p>
+        Aspira a igualar la capacidad intelectual de los humanos, pudiendo resolver múltiples tipos de problemas con autonomía. 
+        Todavía está en desarrollo y es objeto de estudio y debate.
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="bg-azul-claro text-center py-4 text-sm mt-12">
+    <p class="text-white">© 2025 Alvaro Roldan y Thiago Icochea</p>
+  </footer>
+
+</body>
+</html>

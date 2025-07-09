@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aplicaciones de la IA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-azul-oscuro text-white font-sans">
+
+  <header class="bg-azul-medio shadow-lg sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold text-amarillo">IA Web</h1>
+
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" 
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <ul id="nav-menu" class="hidden md:flex space-x-6 text-white font-medium">
+      <li><a href="index.html" class="hover:text-amarillo-claro">Inicio</a></li>
+      <li><a href="historia.html" class="hover:text-amarillo-claro">Historia</a></li>
+      <li><a href="tipos.html" class="hover:text-amarillo-claro">Tipos</a></li>
+      <li><a href="aplicaciones.html" class="hover:text-amarillo-claro">Aplicaciones</a></li>
+      <li><a href="etica.html" class="hover:text-amarillo-claro">Ética</a></li>
+      <li><a href="futuro.html" class="hover:text-amarillo-claro">Futuro</a></li>
+    </ul>
+  </nav>
+
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+    <ul class="flex flex-col space-y-2 text-white font-medium">
+      <li><a href="index.html" class="hover:text-amarillo-claro">Inicio</a></li>
+      <li><a href="historia.html" class="hover:text-amarillo-claro">Historia</a></li>
+      <li><a href="tipos.html" class="hover:text-amarillo-claro">Tipos</a></li>
+      <li><a href="aplicaciones.html" class="hover:text-amarillo-claro">Aplicaciones</a></li>
+      <li><a href="etica.html" class="hover:text-amarillo-claro">Ética</a></li>
+      <li><a href="futuro.html" class="hover:text-amarillo-claro">Futuro</a></li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+  <section id="carousel" class="relative w-full h-[50vh] overflow-hidden mb-10">
+    <div class="relative h-full">
+      <div id="carousel-aplicaciones" class="relative h-full">
+        <img src="img/aplicacion1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000">
+        <img src="img/aplicacion2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+        <img src="img/aplicacion3.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-gray-translucido flex items-center justify-center text-center px-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-white animate-fadeInUp">Aplicaciones reales de la Inteligencia Artificial</h2>
+    </div>
+  </section>
+
+  <script>
+    const slidesApp = document.querySelectorAll("#carousel-aplicaciones img");
+    let currentApp = 0;
+    setInterval(() => {
+      slidesApp[currentApp].classList.remove("opacity-100");
+      slidesApp[currentApp].classList.add("opacity-0");
+      currentApp = (currentApp + 1) % slidesApp.length;
+      slidesApp[currentApp].classList.remove("opacity-0");
+      slidesApp[currentApp].classList.add("opacity-100");
+    }, 4000);
+  </script>
+
+  <main class="py-8 px-4 max-w-6xl mx-auto animate-fadeInUp">
+    <section class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-amarillo mb-4">¿Dónde se usa la IA?</h2>
+      <p class="text-lg max-w-3xl mx-auto">
+        La Inteligencia Artificial está presente en diversas industrias, resolviendo problemas complejos, 
+        mejorando procesos y transformando nuestras vidas. Aquí te mostramos algunas de sus principales aplicaciones.
+      </p>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white text-black p-4 rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+        <img src="img/ia_salud.jpg" alt="IA en la salud" class="w-full h-40 object-cover rounded mb-3" />
+        <h3 class="text-xl font-bold mb-2">Salud</h3>
+        <p>
+          La IA se usa en diagnósticos médicos, análisis de imágenes, predicción de enfermedades y medicina personalizada. 
+          Mejora la precisión y reduce tiempos en los tratamientos.
+        </p>
+      </div>
+
+      <div class="bg-white text-black p-4 rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+        <img src="img/ia_finanzas.jpg" alt="IA en finanzas" class="w-full h-40 object-cover rounded mb-3" />
+        <h3 class="text-xl font-bold mb-2">Finanzas</h3>
+        <p>
+          Utilizada para detectar fraudes, automatizar inversiones y evaluar riesgos. 
+          Los algoritmos de IA permiten tomar decisiones en milisegundos en el mundo financiero.
+        </p>
+      </div>
+
+      <div class="bg-white text-black p-4 rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+        <img src="img/ia_transporte.jpg" alt="IA en transporte" class="w-full h-40 object-cover rounded mb-3" />
+        <h3 class="text-xl font-bold mb-2">Transporte</h3>
+        <p>
+          Vehículos autónomos, optimización de rutas y sistemas de tráfico inteligentes dependen de IA para mejorar la seguridad 
+          y reducir el tiempo de viaje.
+        </p>
+      </div>
+
+      <div class="bg-white text-black p-4 rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+        <img src="img/ia_educacion.jpg" alt="IA en educación" class="w-full h-40 object-cover rounded mb-3" />
+        <h3 class="text-xl font-bold mb-2">Educación</h3>
+        <p>
+          La IA permite plataformas adaptativas, tutorías virtuales y personalización del aprendizaje según el ritmo de cada estudiante. 
+          También ayuda a detectar dificultades a tiempo.
+        </p>
+      </div>
+
+      <div class="bg-white text-black p-4 rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+        <img src="img/ia_agricultura.jpg" alt="IA en agricultura" class="w-full h-40 object-cover rounded mb-3" />
+        <h3 class="text-xl font-bold mb-2">Agricultura</h3>
+        <p>
+          Sensores e IA permiten monitorear cultivos, predecir plagas y optimizar el uso de recursos. 
+          Esto mejora el rendimiento y reduce el impacto ambiental.
+        </p>
+      </div>
+
+      <div class="bg-white text-black p-4 rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+        <img src="img/ia_seguridad.jpg" alt="IA en seguridad" class="w-full h-40 object-cover rounded mb-3" />
+        <h3 class="text-xl font-bold mb-2">Seguridad</h3>
+        <p>
+          Sistemas de reconocimiento facial, análisis de comportamiento y vigilancia predictiva son ejemplos de cómo la IA refuerza la seguridad pública y privada.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <section class="py-12 bg-azul-medio px-4 animate-fadeInUp mt-16">
+    <div class="max-w-lg mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-4">¿Conoces otras aplicaciones?</h3>
+      <p class="mb-4">Déjanos tus ideas o sugerencias sobre cómo podría aplicarse la IA en nuevas áreas.</p>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nombre" class="w-full p-2 rounded border text-black" required />
+        <input type="email" placeholder="Correo" class="w-full p-2 rounded border text-black" required />
+        <textarea placeholder="Escribe tu sugerencia..." class="w-full p-2 rounded border text-black" rows="4" required></textarea>
+        <button type="submit" class="bg-amarillo hover:bg-amarillo-claro text-black px-6 py-2 rounded transition-transform duration-200 hover:scale-105">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-azul-claro text-center py-4 text-sm">
+    <p class="text-white">© 2025 Alvaro Roldan y Thiago Icochea</p>
+  </footer>
+
+</body>
+</html>

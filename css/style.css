@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-azul-oscuro { background-color: #000814; }
+.bg-azul-medio { background-color: #001D3D; }
+.bg-azul-claro { background-color: #003566; }
+
+.text-amarillo { color: #FFC300; }
+.text-amarillo-claro { color: #FFD60A; }
+.text-azul-oscuro { color: #000814; }
+
+.bg-amarillo { background-color: #FFC300; }
+.bg-amarillo-claro { background-color: #FFD60A; }
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+.bg-gray-translucido {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#custom-carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
